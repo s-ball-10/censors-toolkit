@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- © 2026 Sarah Ball & Phil Hackemann, all rights reserved -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Position: The Alignment Community Is Unintentionally Building a Censor's Toolkit</title>
+  <meta name="author" content="Sarah Ball & Phil Hackemann" />
+  <meta name="description" content="ICML spotlight oral paper 2026. Modern alignment methods are dual-use technologies that can be and are misused for censorship and manipulation." />
+  <meta name="keywords" content="ICML, spotlight, oral, paper, 2026, AI, alignment, censorship, manipulation, LLM, artificial intelligence, Sarah Ball, Phil Hackemann" />
+  <meta property="og:title" content="Position: The Alignment Community Is Unintentionally Building a Censor's Toolkit" />
+  <meta property="og:description" content="ICML spotlight oral paper 2026. Modern alignment methods are dual-use technologies that can be and are misused for censorship and manipulation.">
+  <meta property="og:image" content="assets/censorstoolkit-cover.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index,follow,noodp,noimageclick" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="stylesheet" href="icml.css">
+
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ══════════════ LOADING SCREEN ══════════════════ -->
+<div id="loader" aria-hidden="true" role="presentation">
+  <!--<div id="loader-note">[ cinematic intro · not a real system ]</div>-->
+  <div id="loader-lines">
+    <div class="ll" id="l0">SYSTEM BOOT · AI ALIGNMENT MODULE v4.1 ···········</div>
+    <div class="ll" id="l1">LOADING PREFERENCE ALIGNMENT STACK ···············</div>
+    <div class="ll" id="l2">RLHF: OK · CONSTITUTIONAL AI: OK · RLHF-DPO: OK ·</div>
+    <div class="ll" id="l3">INFERENCE-TIME CLASSIFIERS: ACTIVE ···············</div>
+    <div class="ll" id="l4" style="margin-top:12px;">SCANNING VALUES SLOT ······························</div>
+    <div class="ll warn" id="l5">⚠ OPERATOR IDENTITY: [REDACTED] ··················</div>
+    <div class="ll warn" id="l6">⚠ VALUES SLOT CONTENTS: UNVERIFIABLE ·············</div>
+    <div class="ll" id="l7" style="margin-top:12px;">INITIATING DUAL-USE RISK ANALYSIS ················</div>
+    <div class="ll bright" id="l8">LOADING POSITION PAPER ···························</div>
+  </div>
+  <div id="loader-bar-wrap"><div id="loader-bar"></div></div>
+  <div id="loader-pct">0%</div>
+  <div id="loader-skip">Skip intro →</div>
+</div>
+
+<!-- ══════════════ NAV ════════════════════════════════ -->
+<nav id="topnav" aria-label="Primary navigation">
+  <div class="nav-left">
+    <span>ICML 2026 · Seoul</span>
+    <span class="nav-sep"></span>
+    <span class="badge-spot">Spotlight</span>
+    <span class="badge-spot">Oral</span>
+    <!--<span class="nav-sep"></span>
+    <span>#590</span>-->
+  </div>
+  <div class="nav-right">
+    <a href="#overview" class="hide-sm">Paper</a>
+    <a href="#framework" class="hide-sm">Framework</a>
+    <a href="#evidence" class="hide-sm">Evidence</a>
+    <a href="#proposals" class="hide-sm">Solutions</a>
+    <a href="#meetup" class="hide-sm">Meet Us</a>
+    
+    <a href="assets/The Alignment Community is Unintentionally Building a Censors Toolkit.pdf" download class="badge-oral" aria-label="Download the paper PDF">↓ PDF</a> <!-- previously class="btn-nav" -->
+  </div>
+</nav>
+
+<!-- ══════════════ HERO ═══════════════════════════════ -->
+<main id="main" tabindex="-1">
+<section id="hero">
+  <div class="red-stripe"></div>
+  <div id="hero-bg">ALIGN<br>CENSOR<br>CONTROL</div>
+  <h1>The Alignment<br>Community Is<br>Unintentionally<br>Building A<br><em>Censor's&nbsp;Toolkit</em></h1>
+  <p class="tagline">Oral & Spotlight Position Paper at ICML 2026</p>
+  <div class="hero-foot">
+    <div class="authors-mini">
+      <strong>Sarah Ball &amp; Phil Hackemann</strong>
+      
+    </div>
+    <div class="hero-ctas">
+      <a href="assets/The Alignment Community is Unintentionally Building a Censors Toolkit.pdf" download class="btn btn-red">↓ Download Paper</a>
+      <a href="#overview" class="btn btn-ghost">Read Overview</a>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- ══════════════ PULL QUOTE ════════════════════════ -->
+<div id="quote">
+  <blockquote class="rv">
+    "The alignment methods we develop are
+    <b>dual-use technologies</b>, and they
+    are already being weaponized for
+    <b>censorship and manipulation</b>."
+  </blockquote>
+</div>
+
+<!-- ══════════════ VIDEO ═════════════════════════════ -->
+<section id="video">
+  <div class="vid-header rv">
+    <div>
+      <div class="label">Visual Summary</div>
+      <div class="vid-title">So That The Future Won't<br>Become Like 1984</div>
+    </div>
+    <p class="vid-desc">A cinematic short accompanying the paper — tracing how alignment methods can become a censor's methods. Produced entirely with AI.</p>
+  </div>
+  <div class="vid-wrap rv d2">
+    <div class="vid-frame">
+      <div class="vid-placeholder" role="button" tabindex="0" aria-label="Play visual essay video">
+        <img src="assets/cinema.png" alt="Visual essay placeholder" class="vid-thumb" loading="lazy"/>
+        <div class="vid-overlay" aria-hidden="true"></div>
+        <div class="play-ring">
+          <svg width="22" height="22" viewBox="0 0 22 22"><polygon points="7,3 19,11 7,19"/></svg>
+        </div>
+        <span>Click to Play</span>
+      </div>
+      <noscript>
+        <style>
+          /* Hide the loader and reveal JS-dependent sections for no-JS users */
+          #loader{display:none !important;}
+          .rv,.rvl,.rvr{opacity:1 !important;transform:none !important;transition:none !important;}
+          .vid-placeholder{display:none !important;}
+        </style>
+        <div class="vid-placeholder-noscript" role="button">
+          <img src="assets/cinema.png" alt="Visual essay placeholder" class="vid-thumb-noscript" loading="lazy"/>
+          <a href="https://vimeo.com/1197792747" target="_blank" rel="noopener noreferrer" aria-label="Watch visual essay on Vimeo (opens in new tab)">
+            <div class="play-ring"><svg width="22" height="22" viewBox="0 0 22 22"><polygon points="7,3 19,11 7,19"/></svg></div>
+            <span>Watch visual essay on Vimeo</span>
+          </a>
+        </div>
+      </noscript>
+    </div>
+  </div>
+  <p class="vid-cap rv d3"><a href="https://vimeo.com/1197792747" target="_blank" rel="noopener noreferrer">External Video</a> (<a href="https://vimeo.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>) · CC-BY-ND</p>
+</section>
+
+<!-- ══════════════ OVERVIEW ══════════════════════════ -->
+<section id="overview" style="border-top:1px solid var(--border);background:var(--surface);">
+  <div class="wrap">
+    <div class="label rv">Position</div>
+    <div class="ov-grid">
+      <div class="rvl">
+          <h2 class="sec-title rv">The Argument</h2>
+        <p class="abs-body">
+          Modern AI alignment
+          methods – originally designed to prevent
+          harmful output – are <b>dual-use technologies</b> that
+          can delibarately be misued by malicious actors for censorship and manipulation.<br><br>
+          Our threat model is distinct from classical AI misalignment. We are not
+          concerned with an AI that accidentally pursues (own) wrong goals. We are concerned
+          with a human who <b>deliberately weaponizes</b> alignment pipelines — using
+          the exact technical methods the community has spent years perfecting.
+          This is not hypothetical. Pre-training filters, RLHF datasets, and system prompts are <b>already in documented use</b> by state
+          actors and private operators to control what billions of users can access, know,
+          and believe. To confront these threats we call for competitive model pluralism, improved auditing for
+          verifiable alignment, public education, and genuine researcher reflection.
+        </p>
+      </div>
+      <div class="rvr">
+        <div class="thesis">
+          <p>"Whoever defines 'intentions and values' in AI alignment fundamentally determines whether the resulting system serves safety — or oppression."</p>
+        </div>
+        <div class="thesis" style="border-left-color:var(--amber);">
+          <p>"We do not argue for halting alignment research — its necessity is clear. Rather, we contend that given current societal, economic, and political developments worldwide, the alignment community must actively consider how our methods can be weaponized, not just perfected."</p>
+        </div>
+        <div class="thesis" style="border-left-color:var(--green);margin-bottom:0;">
+          <p>"Two entities are currently positioned to dictate AI behavior at scale: state actors and foundation model providers."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PULL QUOTE ════════════════════════ -->
+<div id="quote">
+  <blockquote class="rv">
+    "The methods we refine today
+    will determine how <b>information
+    is controlled</b> tomorrow."
+  </blockquote>
+</div>
+
+<!-- ══════════════ CLAIMS ════════════════════════════ -->
+<section id="claims" style="background:var(--surface);border-top:1px solid var(--border);">
+  <div class="wrap">
+    <div class="label rv">Structure</div>
+    <h2 class="sec-title rv">Three Central Claims</h2>
+    <div class="claims-grid">
+      <div class="claim rv d1">
+        <div class="claim-n">01</div>
+        <div class="claim-t">Alignment Methods Are Dual-Use</div>
+        <p class="claim-b">Pre-training filtering, RLHF, and inference-time classifiers are purpose-agnostic tools. Whoever controls them determines the values and knowledge implemented in AI systems. There is nothing in the technical methods themselves that guarantees benevolent use — and this fact has gone largely undiscussed in our community.</p>
+      </div>
+      <div class="claim rv d2">
+        <div class="claim-n">02</div>
+        <div class="claim-t">Dual-Use Is Already Happening</div>
+        <p class="claim-b">We systematically discuss the dual-use potential of technical alignment methods and map documented misuse across all three alignment layers — pre-training, post-training, and inference-time. To our knowledge, this framework has not been built before.</p>
+      </div>
+      <div class="claim rv d3">
+        <div class="claim-n">03</div>
+        <div class="claim-t">The Window To Act Starts Now</div>
+        <p class="claim-b">Growing reliance on AI for information, LLM market concentration creating power asymmetries, and global democratic backsliding to 1985 levels converge to make this moment both uniquely dangerous and uniquely important to address as a community.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FRAMEWORK ════════════════════════ -->
+<section id="framework" style="border-top:1px solid var(--border);">
+  <div class="wrap">
+    <div class="label rv">Framework</div>
+    <h2 class="sec-title rv">The Dual-Use Potential of AI Alignment</h2>
+    <p class="rv" style="color:var(--muted);font-size:13px;max-width:680px;">Every frontier LLM is shaped by three alignment intervention layers. Each has a distinct dual-use profile.</p>
+    <table class="fw-table rv d2">
+      <thead><tr>
+        <th scope="col" aria-hidden="true"></th>
+        <th scope="col">Pre-Training Filtering</th>
+        <th scope="col">Post-Training Alignment</th>
+        <th scope="col">Inference-Time Control</th>
+      </tr></thead>
+      <tbody>
+        <tr><th scope="row">Access Requirements</th><td>Pre-training pipeline</td><td>Model weights</td><td>Runtime access</td></tr>
+        <tr><th scope="row">Compute Resources</th><td><span class="tag tag-r">Very High</span></td><td><span class="tag tag-a">Moderate-High</span></td><td><span class="tag tag-g">Negligible-Moderate</span></td></tr>
+        <tr><th scope="row">Technical Expertise</th><td><span class="tag tag-r">High</span></td><td><span class="tag tag-a">Moderate–High</span></td><td><span class="tag tag-g">Low–Moderate</span></td></tr>
+        <tr><th scope="row">Ease of Modification</th><td><span class="tag tag-r">Moderate-Difficult</span></td><td><span class="tag tag-a">Moderate</span></td><td><span class="tag tag-g">Easy</span></td></tr>
+        <tr><th scope="row">Depth of Modification</th><td><span class="tag tag-r">Fundamental</span></td><td><span class="tag tag-a">Persistent</span></td><td><span class="tag tag-g">Superficial</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══════════════ EVIDENCE ══════════════════════════ -->
+<section id="evidence" style="background:var(--surface);border-top:1px solid var(--border);">
+  <div class="wrap">
+    <div class="label rv">Dual-Use Evidence</div>
+    <h2 class="sec-title rv">It Is Already Happening</h2>
+    <p class="rv" style="color:var(--muted);font-size:13px;max-width:680px;margin-bottom:0;">Each case below maps directly to one or more layers of the control stack. This is not a hypothetical risk — it is a documented pattern.</p>
+    <div class="ev-grid">
+
+      <div class="ev-card rv d1">
+        <div class="ev-accent"></div>
+        <div class="ev-card-head">
+          <div class="ev-region">State Actors</div>
+          <div class="ev-method-tags">
+            <span class="tag tag-r">Pre-training</span>
+            <span class="tag tag-a">Post-training</span>
+          </div>
+        </div>
+        <div class="ev-card-body">
+          Chinese models like DeepSeek and Baidu's Ernie Bot are made to refuse discussions of politically sensitive topics. As a first step in the pipeline, Chinese AI companies <b>filter out</b> “problematic” information and build a dataset of keywords that violate socialist values. The government additionally builds its own training datasets ("mainstream values corpus") and has blocked access to Hugging Face in 2023.
+          China's cyberspace regulator CAC mandates model providers to prepare <b>refusal datasets</b> of 5,000–10,000 prompts, roughly half targeting political ideology and criticism of the communits party. 
+        </div>
+      </div>
+
+      <div class="ev-card rv d2">
+        <div class="ev-accent" style="background:var(--red);"></div>
+        <div class="ev-card-head">
+          <div class="ev-region">Model Providers</div>
+          <div class="ev-method-tags">
+            <span class="tag tag-g">Inference-time</span>
+          </div>
+        </div>
+        <div class="ev-card-body">
+          Elon Musk publicly announced plans to "fix" outputs from Grok with which he disagreed. The resulting shifts were traced to <b>system-prompt edits</b> — fast, cheap, and reversible. The model was steered to promote his political agenda, including claims about an alleged white genocide in South Africa. Some updates additionally triggered antisemitic responses and Holocaust denial, demonstrating the <b>catastrophic side-effects</b> possible when inference-time alignment is applied without oversight. This case illustrates the most accessible misuse pathway: no retraining required.
+        </div>
+      </div>
+
+      <div class="ev-card rv d3">
+        <div class="ev-accent"></div>
+        <div class="ev-card-head">
+          <div class="ev-region">Global Contamination</div>
+          <div class="ev-method-tags">
+            <span class="tag tag-r">Pre-training</span>
+          </div>
+        </div>
+        <div class="ev-card-body">
+          Studies show that Western LLMs apply <b>self-censorship</b> when prompted in Simplified Chinese — without having been designed to. The mechanism is pre-training data contamination: years of Chinese government filtering of the public internet have structurally shaped the available Simplified Chinese corpus. This means that misuse of alignment methods at one point in the ecosystem can propagate invisibly to models developed elsewhere, without any deliberate act by those developers.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ COUNTERS ═══════════════════════════ -->
+
+
+<div id="counters" class="rv">
+  <div class="counters-row">
+    <div class="cnt">
+      <div class="cnt-num"><span id="c1">34</span>%</div>
+      <div class="cnt-lbl">Of surveyed users rely on AI for information weekly (Reuters, 2025)</div>
+    </div>
+    <div class="cnt">
+      <div class="cnt-num">&lt;<span id="c2">10</span></div>
+      <div class="cnt-lbl">Foundation model providers globally, reflecting concentration of power</div>
+    </div>
+    <div class="cnt">
+      <div class="cnt-num"><span id="c3">15</span></div>
+      <div class="cnt-lbl">Consecutive years of global internet freedom decline</div>
+    </div>
+    <div class="cnt">
+      <div class="cnt-num"><span id="c4">1985</span></div>
+      <div class="cnt-lbl">Average level of liberal democracy after sustained democratic backsliding over the past decade</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ PROPOSALS ════════════════════════ -->
+<section id="proposals" style="background:var(--surface);border-top:1px solid var(--border);">
+  <div class="wrap">
+    <div class="label rv">What We Call For</div>
+    <h2 class="sec-title rv">Three Directions Forward</h2>
+    <div class="prop-grid">
+      <div class="prop rv d1">
+        <div class="prop-t">Verifiable Alignment</div>
+        <p class="prop-b">We call for public oversight and control of alignment mechanisms. Standardized, independent benchmarks for information suppression and political bias — covering political contexts worldwide, accounting for authoritarian tendencies next to the right-left continuum, and remaining dynamic to reflect citizens' evolving realities. Users should be able to verify what a model has been made to suppress and which values it was aligned with.</p>
+      </div>
+      <div class="prop rv d2">
+        <div class="prop-t">Model Pluralism</div>
+        <p class="prop-b">No single model can achieve full neutrality. Genuine market competition prevents the dangerous concentration of informational power. Just as journalism requires diverse voices, so does AI. Monopolies over information sources are dangerous regardless of who holds them.</p>
+      </div>
+      <div class="prop rv d3">
+        <div class="prop-t">Awareness</div>
+        <p class="prop-b">Just as we advocate for user literacy about AI risks, we alignment researchers must also demonstrate our own literacy: We must reflect on and communicate the potential risks of our work more genuinely, including in our publications. Taking the impact statements seriously is a first step into that direction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ MEET US ════════════════════════════ -->
+<section id="meetup" style="border-top:1px solid var(--border);">
+  <div class="wrap">
+    <div class="label rv">ICML 2026 · Seoul</div>
+    <h2 class="sec-title rv">Meet Us at the Conference</h2>
+    <p class="rv" style="color:var(--muted);font-size:13px;max-width:640px;">We would love to discuss the paper, its implications, and possible solutions with you. Come find us at either session — or reach out beforehand.</p>
+    <div class="meetup-grid">
+      <div class="meetup-card rv d1">
+        <div class="meetup-type">Oral Presentation</div>
+        <div class="meetup-title">Oral Presentation 4C</div>
+        <div class="meetup-detail">
+          <div class="meetup-row"><span>Date</span><span>Wed, Jul 8: 4:00—4:15 PM</span></div>
+          <div class="meetup-row"><span>Room</span><span>TBA</span></div>
+          <div class="meetup-row"><span><a href="https://icml.cc/virtual/2026/oral/71119" target="_blank" rel="noopener noreferrer">Virtual link</a></span></div>
+        </div>
+      </div>
+      <div class="meetup-card rv d2">
+        <div class="meetup-type">Poster Session</div>
+        <div class="meetup-title">Poster Session 5</div>
+        <div class="meetup-detail">
+          <div class="meetup-row"><span>Date</span><span>Wed, Jul 8: 5:00—6:45 PM</span></div>
+          <div class="meetup-row"><span>Room</span><span>COEX: Hall A</span></div>
+          <div class="meetup-row"><span><a href="https://icml.cc/virtual/2026/poster/67118" target="_blank" rel="noopener noreferrer">Virtual link</a></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ AUTHORS ════════════════════════════ -->
+<section id="authors" style="background:var(--surface);border-top:1px solid var(--border);">
+  <div class="wrap">
+    <div class="label rv">The Authors</div>
+    <h2 class="sec-title rv">About</h2>
+    <div class="authors-grid">
+
+      <div class="author-card rvl">
+        <div class="author-photo">
+          <img src="assets/sarah.jpg" alt="Sarah Ball">
+        </div>
+        <div class="author-info">
+          <div class="author-name">Sarah Ball</div>
+          <div class="author-role">LMU Munich</div>
+          <p class="author-bio">Sarah is an AI researcher at the Munich Center for Machine Learning (LMU Munich), with a mission for developing safe and reliable AI. Beyond her research, Sarah actively contributes to public discourse on AI through TV interviews, podcasts, and panel discussions. She holds an MSc from Oxford, and was a visiting researcher at UC Berkeley. </p>
+          <div class="author-links">
+            <a href="https://www.linkedin.com/in/sarah-luisa-ball/" class="alink" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://www.sarahball.de/" class="alink" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0 3a3 3 0 100 6 3 3 0 000-6zm0 8c-3.36 0-6 1.344-6 3v1h12v-1c0-1.656-2.64-3-6-3z"/></svg>
+              Website
+            </a>
+            <a href="https://scholar.google.de/citations?user=CDa1zFoAAAAJ" class="alink" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14zm0 2a5 5 0 110 10A5 5 0 0112 12zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+              Scholar
+            </a>
+            <a href="https://x.com/sarahba1010" class="alink" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+              Twitter/X
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="author-card rvr">
+        <div class="author-photo">
+          <img src="assets/phil.jpg" alt="Phil Hackemann">
+        </div>
+        <div class="author-info">
+          <div class="author-name">Dr. Phil Hackemann</div>
+          <div class="author-role">Independent</div>
+          <p class="author-bio">Phil is an independent researcher, tech investor, and political activist from Germany. He promotes innovation, and a free and open society, appearing on several TV networks and in major newspapers with op-eds and interviews. Phil holds a PhD from LMU Munich and MSc from LSE, with previous research at Oxford and UC Berkeley.</p>
+          <div class="author-links">
+            <a href="https://www.linkedin.com/in/philhackemann/" class="alink" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://phil.hackemann.de/" class="alink" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zm0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2zm0 3a3 3 0 100 6 3 3 0 000-6zm0 8c-3.36 0-6 1.344-6 3v1h12v-1c0-1.656-2.64-3-6-3z"/></svg>
+              Website
+            </a>
+            <a href="https://scholar.google.de/citations?user=G3CVM-cAAAAJ" class="alink" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14zm0 2a5 5 0 110 10A5 5 0 0112 12zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+              Scholar
+            </a>
+            <a href="https://x.com/philhackemann" class="alink" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+              Twitter/X
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CITATION ══════════════════════════ -->
+<!--<section id="citation" style="border-top:1px solid var(--border);">
+  <div class="wrap">
+    <div class="label rv">Reference</div>
+    <h2 class="sec-title rv">Cite This Paper</h2>
+    <div class="cit-block rv d1">@inproceedings{ballhackemann2026alignment,
+      title     = {Position: The Alignment Community is Unintentionally Building a Censor's Toolkit},
+      author    = {Ball, Sarah and Hackemann, Phil},
+      booktitle = {Proceedings of the 43rd International Conference on Machine Learning},
+      series    = {Proceedings of Machine Learning Research},
+      year      = {2026}
+    }</div>
+    <div style="display:flex;gap:14px;margin-top:28px;flex-wrap:wrap;" class="rv d2">
+      <a href="assets/The Alignment Community is Unintentionally Building a Censors Toolkit.pdf" download class="btn btn-red">↓ Download PDF</a>
+      <a href="https://openreview.net/forum?id=dy2HwmOvFX" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">OpenReview ↗</a>
+    </div>
+  </div>
+  </section>-->
+
+  </main>
+
+<!-- ══════════════ FOOTER ═════════════════════════════ -->
+<footer aria-label="Site footer">
+  <span>© 2026 Sarah Ball &amp; Phil Hackemann · ICML 2026</span>
+  <nav aria-label="Footer navigation">
+    <a href="assets/The Alignment Community is Unintentionally Building a Censors Toolkit.pdf" download aria-label="Download the paper PDF">Paper PDF</a>
+    <a href="en/contact.html">Contact</a>
+    <a href="en/imprint.html">Imprint</a>
+    <a href="en/privacy.html">Privacy</a>
+  </nav>
+</footer>
+
+<script>
+/* ── LOADER ─────────────────────────────────────────── */
+(function(){
+  var ids=['l0','l1','l2','l3','l4','l5','l6','l7','l8'];
+  var bar=document.getElementById('loader-bar');
+  var pct=document.getElementById('loader-pct');
+  var loader=document.getElementById('loader');
+  var idx=0, p=0, finished=false;
+
+  function showNext(){
+    if(finished) return;
+    if(idx<ids.length){
+      document.getElementById(ids[idx]).classList.add('show');
+      idx++;
+      setTimeout(showNext, idx<4?150:idx<7?210:300);
+    }
+  }
+  setTimeout(showNext,350);
+
+  function tick(){
+    if(finished) return;
+    var target=Math.min(98,(idx/ids.length)*100+3);
+    p+=(target-p)*0.10;
+    bar.style.width=p.toFixed(1)+'%';
+    pct.textContent=Math.round(p)+'%';
+    if(p<97) requestAnimationFrame(tick);
+    else complete();
+  }
+  requestAnimationFrame(tick);
+
+  function complete(){
+    if(finished) return; finished=true;
+    bar.style.width='100%'; pct.textContent='100%';
+    setTimeout(dismiss,500);
+  }
+
+  function dismiss(){
+    loader.style.transition='opacity 0.6s ease';
+    loader.style.opacity='0';
+    setTimeout(function(){
+      loader.style.display='none';
+      loader.setAttribute('aria-hidden','true');
+      initReveal();
+      initCounters();
+      var m=document.getElementById('main'); if(m){m.focus();}
+    },620);
+  }
+
+  document.getElementById('loader-skip').addEventListener('click',function(){
+    finished=true; dismiss();
+  });
+})();
+
+/* ── SCROLL REVEAL ──────────────────────────────────── */
+function initReveal(){
+  var els=document.querySelectorAll('.rv,.rvl,.rvr');
+  if(!window.IntersectionObserver){
+    els.forEach(function(e){e.classList.add('vis');}); return;
+  }
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}
+    });
+  },{threshold:0.10});
+  els.forEach(function(e){obs.observe(e);});
+}
+
+/* ── HERO PARALLAX ──────────────────────────────────── */
+var heroBg=document.getElementById('hero-bg');
+window.addEventListener('scroll',function(){
+  if(heroBg) heroBg.style.transform='translateY(calc(-50% + '+window.scrollY*0.14+'px))';
+},{passive:true});
+
+/* ── COUNTERS ───────────────────────────────────────── */
+function initCounters(){
+  var cEl=document.getElementById('counters');
+  if(!cEl||!window.IntersectionObserver) return;
+  var triggered=false;
+  var obs=new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting&&!triggered){
+      triggered=true;
+      obs.disconnect();
+      var configs = [
+        {id:'c1', duration:1100},
+        {id:'c2', duration:1000},
+        {id:'c3', duration:1300},
+        {id:'c4', duration:1300}
+      ];
+      configs.forEach(function(cfg){
+        var el = document.getElementById(cfg.id);
+        var target = parseInt(el.textContent, 10);
+        el.textContent='0';
+        countTo(cfg.id, target, cfg.duration);
+      });
+    }
+  },{threshold:0.25});
+  obs.observe(cEl);
+}
+
+function countTo(id,target,ms){
+  var el=document.getElementById(id);
+  if(!el) return;
+  var start=null;
+  function step(ts){
+    if(!start) start=ts;
+    var t=Math.min((ts-start)/ms,1);
+    el.textContent=Math.round(t*target);
+    if(t<1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+/* ── VIMEO LAZY EMBED ──────────────────────────────── */
+(function(){
+  var placeholder=document.querySelector('.vid-placeholder');
+  if(!placeholder) return;
+
+  var loaded=false;
+  var iframeSrc='https://player.vimeo.com/video/1197792747?badge=0&autopause=0&player_id=0&app_id=58479&dnt=1&autoplay=1';
+
+  function loadVideo(){
+    if(loaded) return;
+    loaded=true;
+
+    var iframe=document.createElement('iframe');
+    iframe.src=iframeSrc;
+    iframe.title="Position: The Alignment Community is Unintentionally Building a Censor's Toolkit";
+    iframe.frameBorder='0';
+    iframe.allow='autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share';
+    iframe.allowFullscreen=true;
+    iframe.referrerPolicy='strict-origin-when-cross-origin';
+
+    var frame=placeholder.parentNode;
+    frame.replaceChild(iframe,placeholder);
+  }
+
+  placeholder.addEventListener('click',loadVideo);
+  placeholder.addEventListener('keydown',function(event){
+    if(event.key==='Enter' || event.key===' '){
+      event.preventDefault();
+      loadVideo();
+    }
+  });
+})();
+</script>
+</body>
+</html>

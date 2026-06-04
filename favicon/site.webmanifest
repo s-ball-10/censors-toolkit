@@ -1,0 +1,19 @@
+{
+  "name": "Position: The Alignment Community Is Unintentionally Building a Censor's Toolkit",
+  "description": "ICML spotlight oral paper 2026. Modern alignment methods are dual-use technologies that can be and are misused for censorship and manipulation.",
+  "display": "standalone",
+  "background_color": "#0b0908",
+  "theme_color": "#c42b22",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
