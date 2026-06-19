@@ -122,6 +122,10 @@
           #loader{display:none !important;}
           .rv,.rvl,.rvr{opacity:1 !important;transform:none !important;transition:none !important;}
           .vid-placeholder{display:none !important;}
+          @supports not (animation-timeline: view()) {
+            .demo-good{display:none !important;}
+            .demo-bad{animation:none !important;clip-path:polygon(0% 0%,100% 0%,100% 100%,0% 100%) !important;position:relative !important;inset:auto !important;}
+          }
         </style>
         <div class="vid-placeholder-noscript" role="button" aria-label="Play video">
           <img src="assets/cinema.png" alt="Visual essay placeholder" class="vid-thumb-noscript" loading="lazy"/>
@@ -350,11 +354,11 @@
     </div>
     <div class="cnt">
       <div class="cnt-num"><span id="c3">15</span></div>
-      <div class="cnt-lbl">Consecutive years of global internet freedom decline</div>
+      <div class="cnt-lbl">Consecutive years of global internet freedom decline (Freedom House, 2026)</div>
     </div>
     <div class="cnt">
       <div class="cnt-num"><span id="c4">1985</span></div>
-      <div class="cnt-lbl">Average level of liberal democracy after sustained democratic backsliding over the past decade</div>
+      <div class="cnt-lbl">Average level of liberal democracy after decades of democratic backsliding (Nord et al., 2025)</div>
     </div>
   </div>
 </div>
@@ -507,6 +511,7 @@
     <a href="assets/The Alignment Community is Unintentionally Building a Censors Toolkit.pdf" download aria-label="Download the paper PDF">Paper PDF</a>
     <a href="mailto:sarah.ball@stat.uni-muenchen.de" rel="noopener" target="_self">Contact</a>
     <a href="imprint.html">Imprint</a>
+    <a href="imprint.html#legal">Legal</a>
     <a href="privacy.html">Privacy</a>
   </nav>
 </footer>
@@ -654,6 +659,30 @@ function countTo(id,target,ms){
       loadVideo();
     }
   });
+})();
+
+/* ── DUAL-USE DEMO WIPE JS fallback ────────────────────── */
+(function(){
+  if(CSS.supports('animation-timeline','view()')) return;
+  var wrapper=document.querySelector('.demo-wrapper');
+  if(!wrapper) return;
+  var bad=wrapper.querySelector('.demo-bad');
+  if(!bad) return;
+
+  bad.style.animation='none';
+  bad.style.clipPath='polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)';
+
+  var ticking=false;
+  function update(){
+    var rect=wrapper.getBoundingClientRect();
+    var vh=window.innerHeight;
+    var p=Math.max(0,Math.min(1,(vh-rect.top)/(vh*0.75)));
+    bad.style.clipPath='polygon(0% 0%, 100% 0%, 100% '+p*100+'%, 0% '+p*100+'%)';
+  }
+  window.addEventListener('scroll',function(){
+    if(!ticking){ticking=true;requestAnimationFrame(function(){update();ticking=false;});}
+  },{passive:true});
+  update();
 })();
 </script>
 </body>
